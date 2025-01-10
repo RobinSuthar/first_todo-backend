@@ -13,6 +13,11 @@ app.get("/todos", async function (req, res) {
   res.json({ allTodos });
 });
 
+app.get("/", async function (req, res) {
+ 
+  res.json({ msg:"Checking for deployment" });
+});
+
 //return all the todos from db
 app.post("/todos", function (req, res) {
   const userInput = req.body;
