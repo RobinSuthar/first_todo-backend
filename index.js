@@ -6,7 +6,7 @@ import DataBaseSchema from "./db.js";
 const app = express();
 
 app.use(express.json());
-app.use(cors("http://localhost:5173/"));
+app.use(cors());
 
 app.get("/todos", async function (req, res) {
   const allTodos = await DataBaseSchema.find({}).sort({ createdAt: "desc" });
